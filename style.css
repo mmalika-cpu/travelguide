@@ -91,11 +91,15 @@ p {
 }
 
 .home img {
-  width: 950px;
-  height: 700px;
-  object-fit: cover
+  width: 105%;
+  height: auto;
 }
 
+@media (max-width: 1400px) {
+  .home {
+    grid-template-columns: 1fr;
+  }
+}
 
 .history {
   display: grid;
@@ -111,9 +115,14 @@ p {
 }
 
 .history img {
-  width: 800px;
-  height: 450px;
-  object-fit: cover
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1400px) {
+  .history {
+    grid-template-columns: 1fr;
+  }
 }
 
 .places {
@@ -129,25 +138,37 @@ p {
 }
 
 .place img {
-  width: 400px;
-  height: 400px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
   object-fit: cover
 }
 
+@media (max-width: 1400px) {
+  .place {
+    grid-template-columns: 1fr;
+  }
+}
 
-.gallery {
+
+.photos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
-.gallery img {
-  width: 400px;
-  height: 400px;
+.photos img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
   object-fit: cover
 }
 
-
+@media (max-width: 1000px) {
+  .photos {
+    grid-template-columns: 1fr;
+  }
+}
 
 .custom-link {
     text-decoration: underline; 
